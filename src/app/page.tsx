@@ -23,6 +23,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import { FadeIn, Counter } from "@/components/animations";
+import Link from "next/link";
 
 /* ------------------------------------------------------------------ */
 /*  DATA                                                               */
@@ -97,10 +98,10 @@ export default function Page() {
 
         {/* ============ HEADER ============ */}
         <header className="relative z-50 glass sticky top-0 px-5 md:px-10 py-4 flex items-center justify-between">
-          <div className="flex items-center gap-2.5">
+          <a href="https://x.com/AngelDelN" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 hover:opacity-80 transition-opacity">
             <Scale className="text-[var(--accent-light)]" size={24} strokeWidth={1.5} />
-            <span className="font-bold text-xl tracking-tight uppercase">StartupVE</span>
-          </div>
+            <span className="font-bold text-xl tracking-tight uppercase">AngelDelN</span>
+          </a>
           <nav className="hidden lg:flex items-center gap-7 text-[11px] font-bold uppercase tracking-[0.18em] text-white/60">
             <a href="#problema" className="hover:text-[var(--accent-light)] transition-colors">Problema</a>
             <a href="#plataforma" className="hover:text-[var(--accent-light)] transition-colors">Plataforma</a>
@@ -108,9 +109,9 @@ export default function Page() {
             <a href="#bases" className="hover:text-[var(--accent-light)] transition-colors">Bases Legales</a>
             <a href="#roadmap" className="hover:text-[var(--accent-light)] transition-colors">Roadmap</a>
           </nav>
-          <a href="#cta" className="bg-[var(--accent)] text-white px-5 py-2.5 text-[11px] font-bold uppercase tracking-widest rounded-full hover:bg-[var(--accent-light)] transition-all hidden sm:block">
-            Empezar
-          </a>
+          <Link href="/aplicar" className="bg-[var(--accent)] text-white px-5 py-2.5 text-[11px] font-bold uppercase tracking-widest rounded-full hover:bg-[var(--accent-light)] transition-all hidden sm:block">
+            Aplicar
+          </Link>
         </header>
 
         <main className="relative z-10 flex flex-col gap-5 p-4 md:p-5">
@@ -445,23 +446,20 @@ export default function Page() {
                   Co-funda la capa legal. Valida templates RAG, asesora startups tech y escala con modelo equity + fee. Posiciónate como el abogado tech de Venezuela.
                 </p>
               </div>
-              <button className="bg-white/8 backdrop-blur-md text-white px-7 py-4 rounded-full text-[11px] font-bold uppercase tracking-widest border border-white/15 hover:bg-white hover:text-black transition-all flex items-center gap-3">
+              <Link href="/aplicar" className="bg-white/8 backdrop-blur-md text-white px-7 py-4 rounded-full text-[11px] font-bold uppercase tracking-widest border border-white/15 hover:bg-white hover:text-black transition-all flex items-center gap-3">
                 Aplicar como Partner <ArrowRight size={16} />
-              </button>
+              </Link>
             </FadeIn>
 
-            <FadeIn delay={100} className="w-full md:w-1/2 p-10 lg:p-16 rounded-[2rem] bg-gradient-to-br from-[var(--accent)] to-[#6b3c20] text-white flex flex-col justify-between items-start relative overflow-hidden hover:-translate-y-1 transition-transform duration-500">
+            <FadeIn delay={100} className="w-full md:w-1/2 p-10 lg:p-16 rounded-[2rem] bg-gradient-to-br from-[var(--accent)] to-[#6b3c20] text-white flex flex-col justify-between items-start relative overflow-hidden">
               <div className="absolute -top-16 -right-16 w-72 h-72 bg-[var(--accent-light)] blur-[90px] opacity-50 rounded-full" />
               <div className="relative z-10">
                 <p className="text-[11px] font-bold uppercase tracking-[0.15em] text-white/60 mb-5 border border-white/25 px-3 py-1 rounded-full w-max">Startups</p>
                 <h2 className="font-editorial text-4xl lg:text-6xl mb-5 tracking-tight">Para<br />Emprendedores</h2>
-                <p className="text-base text-white/85 leading-relaxed mb-10 max-w-sm">
-                  Formaliza tus acuerdos hoy usando el Código Civil. Sin burocracia, pagos en USDT. Desde $9.
+                <p className="text-base text-white/85 leading-relaxed max-w-sm">
+                  Formaliza tus acuerdos usando el Código Civil. Sin burocracia, pagos en USDT. Desde $9. Plataforma en construcción — pronto disponible.
                 </p>
               </div>
-              <button className="relative z-10 bg-white text-black px-7 py-4 rounded-full text-[11px] font-bold uppercase tracking-widest hover:bg-transparent hover:text-white border border-white transition-all flex items-center gap-3">
-                Generar Contrato <ArrowRight size={16} />
-              </button>
             </FadeIn>
           </section>
 
@@ -473,7 +471,7 @@ export default function Page() {
             <div className="col-span-1 md:col-span-2">
               <div className="flex items-center gap-2.5 mb-5">
                 <Scale className="text-[var(--accent-light)]" size={28} strokeWidth={1.5} />
-                <span className="font-bold text-2xl uppercase tracking-tight">StartupVE</span>
+                <span className="font-bold text-2xl uppercase tracking-tight">AngelDelN</span>
               </div>
               <p className="text-white/50 text-base max-w-md leading-relaxed">
                 La infraestructura legal automatizada para la próxima generación de empresas tecnológicas en Venezuela. Basado en derecho positivo venezolano.
@@ -499,7 +497,7 @@ export default function Page() {
             </div>
           </div>
           <div className="flex flex-col md:flex-row items-center justify-between gap-5 text-[10px] font-bold uppercase tracking-widest text-white/30">
-            <p>© 2026 StartupVE Legaltech.</p>
+            <p>© 2026 AngelDelN Legaltech.</p>
             <p className="max-w-2xl text-center md:text-right leading-relaxed">
               Disclaimer: Este sitio genera documentos jurídicos mediante IA basados en el Código Civil, Código de Comercio y leyes venezolanas vigentes. No sustituye la relación cliente-abogado.
             </p>
